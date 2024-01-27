@@ -150,12 +150,14 @@
             formControlName="create_empty_src_dirs"
             [label]="helptext.empty_src_dirs_placeholder | translate"
           ></ix-checkbox>
-          <ix-checkbox
-            *ngIf="form.controls.follow_symlinks.enabled"
-            formControlName="follow_symlinks"
-            [label]="helptext.follow_symlinks_placeholder | translate"
-            [tooltip]="helptext.follow_symlinks_tooltip | translate"
-          ></ix-checkbox>
+          <ix-select
+            *ngIf="form.controls.symlinks.enabled"
+            formControlName="symlinks"
+            [label]="helptext.symlinks_placeholder | translate"
+            [tooltip]="helptext.symlinks_tooltip | translate"
+            [required]="true"
+            [options]="symlinkHandlingOptions$"
+          ></ix-select>
           <ix-textarea
             *ngIf="form.controls.pre_script.enabled"
             formControlName="pre_script"

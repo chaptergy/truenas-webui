@@ -18,6 +18,7 @@ import { Direction, directionNames } from 'app/enums/direction.enum';
 import { ExplorerNodeType } from 'app/enums/explorer-type.enum';
 import { mntPath } from 'app/enums/mnt-path.enum';
 import { Role } from 'app/enums/role.enum';
+import { SymlinkHandling } from 'app/enums/symlink-handling.enum';
 import { TransferMode, transferModeNames } from 'app/enums/transfer-mode.enum';
 import { mapToOptions } from 'app/helpers/options.helper';
 import { helptextCloudSync } from 'app/helptext/data-protection/cloudsync/cloudsync';
@@ -103,7 +104,7 @@ export class CloudSyncFormComponent implements OnInit {
 
     snapshot: [false],
     create_empty_src_dirs: [false],
-    follow_symlinks: [false],
+    symlinks: [SymlinkHandling.Ignore, Validators.required],
     pre_script: [''],
     post_script: [''],
     exclude: [[] as string[]],

@@ -87,7 +87,7 @@ describe('CloudSyncWhatAndWhenComponent', () => {
       enabled: true,
       encryption: false,
       exclude: [],
-      follow_symlinks: false,
+      symlinks: 'IGNORE',
       include: undefined,
       path: '/mnt/gphotos',
       post_script: '',

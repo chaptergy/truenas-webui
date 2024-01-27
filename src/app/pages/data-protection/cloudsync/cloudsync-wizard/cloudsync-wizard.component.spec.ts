@@ -122,7 +122,7 @@ describe('CloudSyncWizardComponent', () => {
       enabled: true,
       encryption: false,
       exclude: [],
-      follow_symlinks: false,
+      symlinks: 'IGNORE',
       include: undefined,
       path: '/mnt',
       post_script: '',

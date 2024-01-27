@@ -132,8 +132,12 @@ export const helptextCloudSync = {
   cloudsync_picker_tooltip: T('Select a schedule preset or choose <i>Custom</i> to open\
  the advanced scheduler.'),
 
-  follow_symlinks_placeholder: T('Follow Symlinks'),
-  follow_symlinks_tooltip: T('Follow symlinks and copy the items to which they link.'),
+  symlinks_placeholder: T('Symlink Handling'),
+  symlinks_tooltip: T(
+    '<b>IGNORE</b>: Just ignore symlinks, default behavior of rclone.<br/>\
+    <b>FOLLOW</b>: Follow symlinks and copy the items to which they link.<br/>\
+    <b>RCLONELINK</b>: Convert symlinks to .rclonelink files.<br/>',
+  ),
 
   transfers_placeholder: T('Transfers'),
   transfers_tooltip: T('Number of simultaneous file transfers. Enter a\

@@ -56,7 +56,7 @@ describe('CloudSyncListComponent', () => {
       encryption_password: '',
       encryption_salt: '',
       create_empty_src_dirs: false,
-      follow_symlinks: false,
+      symlinks: 'IGNORE',
       credentials: {
         id: 1,
         name: 'Google Drive',

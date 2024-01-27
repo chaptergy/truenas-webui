@@ -1,4 +1,5 @@
 import { Direction } from 'app/enums/direction.enum';
+import { SymlinkHandling } from 'app/enums/symlink-handling.enum';
 import { TransferMode } from 'app/enums/transfer-mode.enum';
 import { DataProtectionTaskState } from 'app/interfaces/data-protection-task-state.interface';
 import { Job } from 'app/interfaces/job.interface';
@@ -29,7 +30,7 @@ export interface CloudSyncTask {
   encryption_salt?: string;
   exclude: string[];
   filename_encryption: boolean;
-  follow_symlinks: boolean;
+  symlinks: SymlinkHandling;
   id: number;
   include: string[];
   job: Job;
